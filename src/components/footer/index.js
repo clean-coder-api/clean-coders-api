@@ -140,7 +140,7 @@ const Footer = () => {
           <div className="container justify-content-center">
             <div className="row">
               <div className="col-md-6">
-                <span>Copyright © 2019, All Right Reserved Seobin</span>
+                <span>Copyright © 2021, All Right Reserved</span>
               </div>
             </div>
           </div>
