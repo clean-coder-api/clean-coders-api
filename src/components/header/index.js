@@ -1,9 +1,11 @@
 import React from "react";
+import {ReactComponent as TeamLogo} from '../../assets/team-logo.svg'
+import './header.css'
 const Header=()=> {
     return (
-      <div>
-        <h1>Header</h1>
-          <hr/>
+      <div className="header">
+              <TeamLogo className="logo"/>
+          <h1 className="team-name">Clean Coders</h1>
       </div>
     );
   }
