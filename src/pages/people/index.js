@@ -1,4 +1,4 @@
-import actor from "../../assets/img/actor.jpg";
+import actor from "../../assets/img/1.jpg";
 const People = (props) => {
   return (
     <>
