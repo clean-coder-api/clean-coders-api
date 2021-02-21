@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cards = ({ peoples }) => {
   // if (loading) {
@@ -29,9 +30,7 @@ const Cards = ({ peoples }) => {
               <p className="card-text">
                 <b>Birth Year:</b> {people.birth_year}
               </p>
-              <a href="!#" className="btn btn-block btn-secondary">
-                View
-              </a>
+              <Link to={`/people/${people.id}`} className="btn btn-block btn-secondary">View</Link>
             </div>
           </div>
         ))}
