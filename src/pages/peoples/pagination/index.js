@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-function Pagination(props) {
-    const renderPages = () => {
+function Pagination(props){
+    const renderPages=()=> {
         let pagination = [];
         for (let i = 1; i <= props.totalNumPages; i++) {
             pagination.push(
@@ -14,13 +14,13 @@ function Pagination(props) {
         return pagination
     }
 
-    return (
-        <div className="col col-md-8 m-3 border">
-            <div className="row justify-content-center">
-                {renderPages()}
+        return (
+            <div className="col col-md-8 m-3 border">
+                <div className="row justify-content-center">
+                    {renderPages()}
+                </div>
             </div>
-        </div>
-    )
+        )
 }
 
 export default Pagination;

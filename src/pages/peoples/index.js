@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Cards from "./cards";
 import Pagination from "./pagination";
@@ -23,15 +23,10 @@ function Peoples(props) {
         setTotalNumPages(Math.ceil(peoples.length / pageSize))
     }
 
-    // Get current peoples
-    const indexOfLastPeople = props.match.params.id * pageSize;
-    const indexOfFirstPeople = indexOfLastPeople - pageSize;
-    const currentPeoples = peoples.slice(indexOfFirstPeople, indexOfLastPeople);
-
     return (
         <div className="row justify-content-center">
-            <Cards peoples={currentPeoples} />
-            <Pagination totalNumPages={totalNumPages} pageId={props.match.params.id} />
+            <Cards/>
+            <Pagination totalNumPages={totalNumPages} pageId={props.match.params.id}/>
         </div>
     )
 }
