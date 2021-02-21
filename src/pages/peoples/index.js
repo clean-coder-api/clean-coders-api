@@ -7,7 +7,6 @@ function Peoples(props) {
     const [pageSize] = useState(4);
     const [peoples, setPeoples] = useState([]);
     const [totalNumPages, setTotalNumPages] = useState(0);
-    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         if (peoples.length <= 0) getPeoples()
@@ -25,17 +24,14 @@ function Peoples(props) {
     }
 
     // Get current peoples
-    const indexOfLastPeople = currentPage * pageSize;
+    const indexOfLastPeople = props.match.params.id * pageSize;
     const indexOfFirstPeople = indexOfLastPeople - pageSize;
     const currentPeoples = peoples.slice(indexOfFirstPeople, indexOfLastPeople);
-
-    // Change page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div className="row justify-content-center">
             <Cards peoples={currentPeoples} />
-            <Pagination totalNumPages={totalNumPages} pageId={props.match.params.id} paginate={paginate} />
+            <Pagination totalNumPages={totalNumPages} pageId={props.match.params.id} />
         </div>
     )
 }

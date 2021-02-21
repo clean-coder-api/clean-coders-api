@@ -8,7 +8,7 @@ function Pagination(props) {
             pagination.push(
                 props.pageId === i.toString() ?
                     <a key={i} className="btn btn-primary m-3 disabled">{i}</a> :
-                    <NavLink onClick={() => props.paginate(i)} key={i} className="btn btn-primary m-3" to={'/peoples/' + i}>{i}</NavLink>
+                    <NavLink key={i} className="btn btn-primary m-3" to={'/peoples/' + i}>{i}</NavLink>
             )
         }
         return pagination
