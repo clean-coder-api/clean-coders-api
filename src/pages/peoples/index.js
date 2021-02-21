@@ -15,8 +15,13 @@ function Peoples(props) {
     })
 
     const getPeoples = () => {
+        let Array =[]
         axios.get('https://swapi.dev/api/people/').then(res => {
-            setPeoples((res.data.results))
+            for (let i = 0; i < 10; i++) {
+                res.data.results[i].id=i
+                Array.push( res.data.results[i])
+            }
+            setPeoples(Array)
         }).catch(err => console.log(err))
     }
 
