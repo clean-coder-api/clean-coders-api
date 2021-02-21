@@ -7,9 +7,9 @@ function Peoples(props) {
     // const [currentPage, setCurrentPage] = useState(1);
 
     // Get current peoples
-    // const indexOfLastPeople = props.match.params.id * pageSize;
-    // const indexOfFirstPeople = indexOfLastPeople - pageSize;
-    // const currentPeoples = props.peoples.slice(indexOfFirstPeople, indexOfLastPeople);
+    const indexOfLastPeople = props.match.params.id * props.pageSize;
+    const indexOfFirstPeople = indexOfLastPeople -props.pageSize;
+    const currentPeoples = props.peoples.slice(indexOfFirstPeople, indexOfLastPeople);
 
     // Change page
     // const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -17,7 +17,7 @@ function Peoples(props) {
     return (
         <div className="container">
             <div className="row justify-content-center">
-                {/*<Cards peoples={currentPeoples} />*/}
+                <Cards peoples={currentPeoples} />
                 <Pagination totalNumPages={props.totalNumPages} pageId={props.match.params.id}  />
             </div>
         </div>

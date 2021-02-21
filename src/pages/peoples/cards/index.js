@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Cards = ({ peoples }) => {
   // if (loading) {
   //   return (
@@ -15,7 +15,10 @@ const Cards = ({ peoples }) => {
     <div className="container mt-5 mb-5">
       <div className="row justify-content-center">
         {peoples.map((people, index) => (
-          <div key={index} className="card col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 rounded">
+          <div
+            key={index}
+            className="card col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 rounded"
+          >
             <img
               src="https://lumiere-a.akamaihd.net/v1/images/star-wars-the-rise-of-skywalker-theatrical-poster-1000_ebc74357.jpeg?region=0%2C0%2C891%2C1372"
               className="card-img-top rounded"
@@ -29,9 +32,15 @@ const Cards = ({ peoples }) => {
               <p className="card-text">
                 <b>Birth Year:</b> {people.birth_year}
               </p>
-              <a href="!#" className="btn btn-block btn-secondary">
+              {/* <a href="!#" className="btn btn-block btn-secondary">
                 View
-              </a>
+              </a> */}
+              <Link
+                to={`/people/${people.id}`}
+                className="btn btn-block btn-secondary"
+              >
+                View
+              </Link>
             </div>
           </div>
         ))}

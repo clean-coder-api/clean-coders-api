@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,50 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.people {
+  padding: 30px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+}
+.boxes {
+  display: flex;
+}
+.leftBox {
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  background: #f5f4f4;
+  padding: 10px;
+  border-radius: 10px;
+}
+.leftBox img {
+  width: 200px;
+}
+.leftBox p {
+  color: black;
+}
+
+.rightBox {
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  background: #f5f4f4;
+  padding: 10px;
+  border-radius: 10px;
+}
+.rightBox p {
+  color: black;
 }
