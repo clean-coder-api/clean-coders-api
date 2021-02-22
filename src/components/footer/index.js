@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as ReactLogo} from '../../logo.svg';
+import {ReactComponent as FooterLogo} from '../../assets/svg/footer-logo.svg';
 import "../../../node_modules/font-awesome/css/font-awesome.min.css"
 
 const Footer = () => {
@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="row">
         <div className="col-md-12 col-lg-4">
           <div className="dk-footer-box-info">
-            <a href="index.html" className="footer-logo">
-            <ReactLogo className="footer-logo col-8" />
+            <a href="/" className="footer-logo">
+            <FooterLogo className="footer-logo col-8" />
             </a>
             <p className="footer-info-text">
               Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
@@ -18,23 +18,23 @@ const Footer = () => {
               <h3>Follow us</h3>
               <ul className="social-list">
                 <li>
-                  <a href="!#">
+                  <a href="/">
                     <i className="fa fa-twitter" />
                   </a>
                 </li>
                 <li>
-                  <a href="!#">
+                  <a href="/">
                     <i className="fa fa-linkedin" />
                   </a>
                 </li>
                 <li>
-                  <a href="!#">
+                  <a href="/">
                     <i className="fa fa-instagram" />
                   </a>
                 </li>
                 <li>
-                  <a href="!#">
-                  <i class="fa fa-github" />
+                  <a href="/">
+                  <i className="fa fa-github" />
                   </a>
                 </li>
               </ul>
@@ -89,15 +89,15 @@ const Footer = () => {
                   <p>Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
                   <ul className="contacts">
                     <li>
-                        <span><i class="fa fa-phone" /></span>
+                        <span><i className="fa fa-phone" /></span>
                         <span> +98 987 654 3210</span>
                     </li>
                     <li>
-                        <span><i class="fa fa-envelope" /></span>
+                        <span><i className="fa fa-envelope" /></span>
                         <span> cleancoders@io.com</span>
                     </li>
                     <li>
-                        <span><i class="fa fa-pin" /></span>
+                        <span><i className="fa fa-pin" /></span>
                         <span> Tehran, Iran</span>
                     </li>
                 </ul>
