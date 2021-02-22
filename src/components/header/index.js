@@ -1,5 +1,6 @@
 import React from "react";
-import {ReactComponent as TeamLogo} from '../../assets/img/log.svg'
+import {ReactComponent as TeamLogo} from '../../assets/team-logo.svg'
+import './header.css'
 const Header=()=> {
     return (
       <div className="header">
@@ -8,6 +9,6 @@ const Header=()=> {
       </div>
     );
   }
-
+  
   export default Header;
   

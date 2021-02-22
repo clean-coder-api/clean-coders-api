@@ -7,8 +7,8 @@ function Pagination(props) {
         for (let i = 1; i <= props.totalNumPages; i++) {
             pagination.push(
                 props.pageId === i.toString() ?
-                    <a key={i} className="disabled-btn">{i}</a> :
-                    <NavLink  key={i} className="pagination-btn" to={'/peoples/' + i}>{i}</NavLink>
+                    <a key={i} className="btn btn-primary m-3 disabled">{i}</a> :
+                    <NavLink  key={i} className="btn btn-primary m-3" to={'/peoples/' + i}>{i}</NavLink>
             )
         }
         return pagination
