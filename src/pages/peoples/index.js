@@ -4,8 +4,6 @@ import Pagination from "./pagination";
 
 function Peoples(props) {
 
-    // const [currentPage, setCurrentPage] = useState(1);
-
     // Get current peoples
     const indexOfLastPeople = props.match.params.id * props.pageSize;
     const indexOfFirstPeople = indexOfLastPeople -props.pageSize;
