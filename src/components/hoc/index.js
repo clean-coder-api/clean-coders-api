@@ -39,9 +39,14 @@ function Hoc() {
   return (
     <div>
       <Header />
-      <Redirect exact from="/" to="/peoples/1" />
       <Route
         exact
+        path="/"
+        render={() => {
+          return <Redirect to="/peoples/1" />;
+        }}
+      />
+      <Route
         path="/peoples/:id"
         component={(props) => (
           <Peoples
@@ -52,6 +57,7 @@ function Hoc() {
           />
         )}
       />
+
       <Route
         component={(props) => <People peoples={peoples} {...props} />}
         path="/people/:id"
