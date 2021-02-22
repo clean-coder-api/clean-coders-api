@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as FooterLogo} from '../../assets/img/log.svg';
+import {ReactComponent as FooterLogo} from '../../assets/svg/footer-logo.svg';
 import "../../../node_modules/font-awesome/css/font-awesome.min.css"
 
 const Footer = () => {

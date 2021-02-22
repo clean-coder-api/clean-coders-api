@@ -1,0 +1,26 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 35px ;
+    margin-bottom: 3.5rem;
+    border-bottom: 6px solid #87d8ce;
+    color: #797475;
+    background-color: #eae7e7;
+}
+.logo{
+    width: 7%;
+    height: auto;
+}
+.logo g{
+    fill: #525050;
+}
+.team-name{
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    line-height: 2.5;
+    font-size: 29px;
+    font-weight: 700;
+}
