@@ -15,26 +15,27 @@ function Hoc() {
   useEffect(() => {
     if (peoples.length <= 0) getPeoples();
     else dividePages();
-  });
+  })
 
-  const getPeoples = () => {
-    let Array = [];
-    axios
-      .get("https://swapi.dev/api/people/")
-      .then((res) => {
-        for (let i = 0; i < 10; i++) {
-          res.data.results[i].id = i + 1;
-          Array.push(res.data.results[i]);
-        }
-        setPeoples(Array);
-      })
-      .catch((err) => console.log(err));
-  };
+  const getPeoples = async () => {
+      let array = [];
+      await axios.get("https://swapi.dev/api/people/")
+          .then((response) => {
+              for (let i = 0; i < 10; i++) {
+                  response.data.results[i].id = i + 1;
+                  array.push(response.data.results [i])
+              }
+              setPeoples(array);
+          })
+          .catch((error) => console.log(error))
+  }
 
-  const dividePages = () => {
-    //calculate number of pages, peoples.length/ (page size that is 4)
-    setTotalNumPages(Math.ceil(peoples.length / pageSize));
-  };
+    // calculating number of pages, peoples.length/(page size that is 4)
+    const dividePages =() =>
+    {
+        setTotalNumPages(
+            Math.ceil(peoples.length / pageSize))
+    }
 
   return (
     <div>
@@ -46,17 +47,14 @@ function Hoc() {
           return <Redirect to="/peoples/1" />;
         }}
       />
-      <Route
-        path="/peoples/:id"
-        component={(props) => (
-          <Peoples
-            totalNumPages={totalNumPages}
-            peoples={peoples}
-            pageSize={pageSize}
-            {...props}
-          />
+        <Route path="/peoples/:id" component={(props) => (
+            <Peoples totalNumPages={totalNumPages}
+                     peoples={peoples}
+                     pageSize={pageSize}
+                     {...props}
+            />
         )}
-      />
+        />
 
       <Route
         component={(props) => <People peoples={peoples} {...props} />}
