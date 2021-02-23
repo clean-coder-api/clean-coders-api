@@ -7,6 +7,7 @@ import Peoples from "../pages/peoples";
 const CreateRoutes = ({peoples,totalNumPages,pageSize,loading}) => {
   return (
     <BrowserRouter>
+    
       <Route
         exact
         path="/"
@@ -32,6 +33,7 @@ const CreateRoutes = ({peoples,totalNumPages,pageSize,loading}) => {
         path="/people/:id"
         exact
       />
+     
     </BrowserRouter>
   );
 };

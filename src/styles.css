@@ -1,63 +1,66 @@
+/* people styles start */
 .people {
-  padding: 30px 0;
-  margin: 0 auto;
+  width: 45%;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
   text-align: center;
+  padding-bottom: 100px;
+  margin: 0 auto;
 }
-.boxes {
+.people h1 {
+ font-size: 30px;
+  color: black;
+  text-shadow: 2px 2px 4px rgb(10, 8, 122);
+}
+.boxesContainer {
   display: flex;
+  margin-top: 20px;
 }
-.leftBox {
-  margin: 10px;
+.box {
+  margin: 15px;
   width: 50%;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid gray;
-  background: #f5f4f4;
-  padding: 10px;
-  border-radius: 10px;
+  border: 1px solid rgb(207, 205, 205);
+  padding: 17px;
+  border-radius: 5px;
 }
-.leftBox img {
+.box img {
   width: 200px;
+  height: 150px;
+  border-radius: 5px;
 }
-.leftBox p {
+.box p {
+  font-size: 18px;
+  color: rgb(10, 8, 122);
+  font-weight: 600;
+}
+.box p > span {
   color: black;
 }
-
 .rightBox {
-  margin: 10px;
-  width: 50%;
-  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid gray;
-  background: #f5f4f4;
-  padding: 10px;
-  border-radius: 10px;
 }
-.rightBox p {
-  color: black;
-}
+/* people styles end */
 
 /*////*/
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-  monospace;
+    monospace;
 }
 
 /* footer styles */
@@ -437,7 +440,6 @@ code {
   width: 300px;
 }
 
-
 /*///*/
 /*header styles*/
 /*///*/
@@ -476,7 +478,7 @@ code {
 /*pagination styles*/
 /*///*/
 
-.disabled-btn{
+.disabled-btn {
   box-shadow: 2px 3px 5px 1px #b5b5b5;
   margin: 1rem;
   padding: 6px 12px;
@@ -484,11 +486,11 @@ code {
   border-radius: 5px;
   color: black;
 }
-.disabled-btn:hover{
+.disabled-btn:hover {
   text-decoration: none;
   color: black;
 }
-.pagination-btn{
+.pagination-btn {
   box-shadow: 2px 3px 5px 1px #b5b5b5;
   margin: 1rem;
   padding: 6px 12px;
@@ -503,6 +505,6 @@ code {
 }
 
 .pagination-btn:focus {
-  transform:translateY(4px);
+  transform: translateY(4px);
   box-shadow: 2px 2px 3px 0 #4e4c4c;
 }

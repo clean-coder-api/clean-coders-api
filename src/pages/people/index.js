@@ -8,25 +8,38 @@ const People = (props) => {
             <div key={people.id} className="people">
               <h1>{people.name}</h1>
 
-              <div className='boxes'>
-                <div className="leftBox">
+              <div className="boxesContainer">
+                <div className="box">
                   <div>
                     <img src={actor} />
                   </div>
                   <div>
-                    <p>gender:{people.gender}</p>
-                    <p>birth year:{people.birth_year}</p>
-                    <p>height:{people.height}</p>
-                    <p>mass:{people.mass}</p>
+                    <p>
+                      gender:<span>{people.gender}</span>
+                    </p>
+                    <p>
+                      birth year:<span>{people.birth_year}</span>
+                    </p>
+                    <p>
+                      height:<span>{people.height}</span>
+                    </p>
+                    <p>
+                      mass:<span>{people.mass}</span>
+                    </p>
                   </div>
                 </div>
-                <div className="rightBox">
-                  <p>hair color:{people.hair_color}</p>
-                  <p>skin color:{people.skin_color}</p>
-                  <p>eye color:{people.eye_color}</p>
+                <div className="box rightBox">
+                  <p>
+                    hair color:<span>{people.hair_color}</span>
+                  </p>
+                  <p>
+                    skin color:<span>{people.skin_color}</span>
+                  </p>
+                  <p>
+                    eye color:<span>{people.eye_color}</span>
+                  </p>
                 </div>
               </div>
-
             </div>
           );
       })}
