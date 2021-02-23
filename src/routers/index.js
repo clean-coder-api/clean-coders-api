@@ -1,0 +1,38 @@
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Redirect } from "react-router";
+import People from "../pages/people";
+import Peoples from "../pages/peoples";
+
+const CreateRoutes = ({peoples,totalNumPages,pageSize}) => {
+  return (
+    <BrowserRouter>
+      <Route
+        exact
+        path="/"
+        render={() => {
+          return <Redirect to="/peoples/1" />;
+        }}
+      />
+      <Route
+        path="/peoples/:id"
+        component={(props) => (
+          <Peoples
+            totalNumPages={totalNumPages}
+            peoples={peoples}
+            pageSize={pageSize}
+            {...props}
+          />
+        )}
+      />
+
+      <Route
+        component={(props) => <People peoples={peoples} {...props} />}
+        path="/people/:id"
+        exact
+      />
+    </BrowserRouter>
+  );
+};
+
+export default CreateRoutes;
