@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "../footer";
 import Header from "../header";
-import Peoples from "../../pages/peoples";
-import People from "../../pages/people";
-import { Route } from "react-router-dom";
-import { Redirect } from "react-router";
+import CreateRoutes from '../../routers';
 
-function Hoc() {
+function Hoc(props) {
   const [pageSize] = useState(4);
   const [peoples, setPeoples] = useState([]);
   const [totalNumPages, setTotalNumPages] = useState(0);
@@ -16,7 +13,7 @@ function Hoc() {
   useEffect(() => {
     if (peoples.length <= 0) getPeoples();
     else dividePages();
-  })
+  });
 
   const getPeoples = async () => {
       setLoading(true);
@@ -33,38 +30,15 @@ function Hoc() {
           .catch((error) => console.log(error))
   }
 
-    // calculating number of pages, peoples.length/(page size that is 4)
-    const dividePages =() =>
-    {
-        setTotalNumPages(
-            Math.ceil(peoples.length / pageSize))
-    }
+  // calculating number of pages, peoples.length/(page size that is 4)
+  const dividePages = () => {
+    setTotalNumPages(Math.ceil(peoples.length / pageSize));
+  };
 
   return (
     <div>
       <Header />
-      <Route
-        exact
-        path="/"
-        render={() => {
-          return <Redirect to="/peoples/1" />;
-        }}
-      />
-        <Route path="/peoples/:id" component={(props) => (
-            <Peoples totalNumPages={totalNumPages}
-                     peoples={peoples}
-                     pageSize={pageSize}
-                     loading={loading}
-                     {...props}
-            />
-        )}
-        />
-
-      <Route
-        component={(props) => <People peoples={peoples} {...props} />}
-        path="/people/:id"
-        exact
-      />
+      <CreateRoutes totalNumPages={totalNumPages} peoples={peoples} pageSize={pageSize} loading={loading}/>
       <Footer />
     </div>
   );
