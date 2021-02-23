@@ -18,7 +18,6 @@ const People = (props) => {
                     <p>birth year:{people.birth_year}</p>
                     <p>height:{people.height}</p>
                     <p>mass:{people.mass}</p>
-                    {/* <p>films:{people.films.map((i)=><div>{i}</div>)}</p> */}
                   </div>
                 </div>
                 <div className="rightBox">
