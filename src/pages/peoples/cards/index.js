@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Cards = ({ peoples }) => {
-  // if (loading) {
-  //   return (
-  //     <div className="Loader">
-  //       <Dimmer active inverted>
-  //         <Loader size="large">Loading...</Loader>
-  //       </Dimmer>
-  //     </div>
-  //   );
-  // }
+import { Dimmer, Loader } from "semantic-ui-react";
+
+const Cards = ({ peoples, loading }) => {
+  
+  if (loading) {
+    return (
+      <div className="Loader">
+        <Dimmer active inverted>
+          <Loader size="large">Loading...</Loader>
+        </Dimmer>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-5 mb-5">

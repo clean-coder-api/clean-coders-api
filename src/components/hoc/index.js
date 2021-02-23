@@ -11,6 +11,7 @@ function Hoc() {
   const [pageSize] = useState(4);
   const [peoples, setPeoples] = useState([]);
   const [totalNumPages, setTotalNumPages] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (peoples.length <= 0) getPeoples();
@@ -18,6 +19,7 @@ function Hoc() {
   })
 
   const getPeoples = async () => {
+      setLoading(true);
       let array = [];
       await axios.get("https://swapi.dev/api/people/")
           .then((response) => {
@@ -26,6 +28,7 @@ function Hoc() {
                   array.push(response.data.results [i])
               }
               setPeoples(array);
+              setLoading(false);
           })
           .catch((error) => console.log(error))
   }
@@ -51,6 +54,7 @@ function Hoc() {
             <Peoples totalNumPages={totalNumPages}
                      peoples={peoples}
                      pageSize={pageSize}
+                     loading={loading}
                      {...props}
             />
         )}
