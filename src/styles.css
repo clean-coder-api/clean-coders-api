@@ -14,7 +14,7 @@ code {
 
 /* people styles */
 .people {
-  width: 65%;
+  width: 70%;
   height: 550px;
   display: flex;
   flex-direction: column;
