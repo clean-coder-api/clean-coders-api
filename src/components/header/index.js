@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as TeamLogo} from '../../assets/img/logo.svg'
+import {ReactComponent as TeamLogo} from '../../assets/svg/teamLogo.svg'
 import '../../styles.css'
 const Header=()=> {
     return (
