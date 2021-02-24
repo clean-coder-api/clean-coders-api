@@ -10,10 +10,10 @@ const People = (props) => {
 
               <div className="boxesContainer">
                 <div className="box">
-                  <div>
+                  <div className='imageBox'>
                     <img src={actor} />
                   </div>
-                  <div>
+                  <div className='textBox'>
                     <p>
                       gender:<span>{people.gender}</span>
                     </p>
