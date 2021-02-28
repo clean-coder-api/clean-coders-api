@@ -3,11 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Redirect } from "react-router";
 import People from "../pages/people";
 import Peoples from "../pages/peoples";
-
-const CreateRoutes = ({peoples,totalNumPages,pageSize,loading}) => {
+import Times from "../pages/tasks";
+const CreateRoutes = ({ peoples, totalNumPages, pageSize, loading }) => {
   return (
-    <BrowserRouter>
-    
+    <>
       <Route
         exact
         path="/"
@@ -32,8 +31,8 @@ const CreateRoutes = ({peoples,totalNumPages,pageSize,loading}) => {
         component={(props) => <People peoples={peoples} {...props} />}
         path="/people/:id"
       />
-     
-    </BrowserRouter>
+      <Route path="/times" component={Times} />
+    </>
   );
 };
 

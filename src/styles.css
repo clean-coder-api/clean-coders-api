@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  text-decoration: none !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -447,31 +449,30 @@ code {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 35px;
+  align-items: center;
+  padding: 10px 35px;
   margin-bottom: 3.5rem;
   color: #797475;
   border-bottom: 6px solid #717579;
   background-color: #eae7e7;
+  font-size: 26px;
 }
-
-.logo {
-  width: 7%;
-  height: auto;
+.header a {
+  color: #797475;
 }
-
-.logo g {
+.header a:hover {
+  color: black;
+}
+.header .logo {
+  width: 100px;
+}
+.header .logo g {
   fill: #525050;
 }
 
-.team-name {
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
+.header .team-name {
   font-size: 29px;
   font-weight: 700;
-  position: relative;
-  top: 26px;
 }
 
 /*pagination styles*/
@@ -505,4 +506,93 @@ code {
 .pagination-btn:focus {
   transform: translateY(4px);
   box-shadow: 2px 2px 3px 0 #4e4c4c;
+}
+/* ================================================================= */
+/* :root{
+  font-size: 8px;
+  padding: 8px;
+  margin: 8px;
+}
+
+
+body , html{
+  background: #f0f0f0;
+  padding: 0 !important;
+  margin: 0 !important;
+} */
+
+/* all elements  */
+/* *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.75rem;
+} */
+/* global styles */
+/* .container{
+  max-width: 1277px;
+  margin: auto;
+  background: #fff;
+  min-height: 100vh;
+}*/
+.time-picker {
+  padding: 2rem;
+  position: relative;
+}
+
+.time-picker > button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffe09c;
+  width: 20px;
+  height: 20px;
+  border-radius: 10rem;
+}
+
+.showNowTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  font-size: 20px;
+}
+.showNowTime span {
+  color: lightgreen;
+}
+
+/* mian */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.main > .row {
+  width: 800px;
+  border: 1px solid #e2e2e2;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+/* footer */
+.timesFooter {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.addTags {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
