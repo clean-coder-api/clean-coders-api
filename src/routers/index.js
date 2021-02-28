@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { Redirect } from "react-router";
 import People from "../pages/people";
 import Peoples from "../pages/peoples";
 import Times from "../pages/tasks";
+import Tags from "../pages/tags";
 const CreateRoutes = ({ peoples, totalNumPages, pageSize, loading }) => {
   return (
     <>
@@ -32,6 +33,7 @@ const CreateRoutes = ({ peoples, totalNumPages, pageSize, loading }) => {
         path="/people/:id"
       />
       <Route path="/times" component={Times} />
+      <Route path="/tags" component={Tags} />
     </>
   );
 };
