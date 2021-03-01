@@ -4,7 +4,7 @@ import TagList from "./tagList";
 
 const TagsWrapper = () => {
   return (
-    <div>
+    <div className='tagsWrapper'>
       <AddTag />
       <TagList/>
     </div>

@@ -7,7 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none !important;
+  list-style: none;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -589,10 +592,41 @@ body , html{
   width: 800px;
   margin: 0 auto;
 }
-
-.addTags {
-  width: 800px;
-  height: 500px;
+/* tags style */
+.tagsWrapper {
+  width: 600px;
+  min-height: calc(100vh - 584px);
   margin: 0 auto;
-  text-align: center;
+  padding: 30px 0;
+}
+.oneTagContainer {
+  width: 100%;
+}
+.oneTag {
+  width: 100%;
+  min-height: 54px;
+  list-style: none;
+  margin: 15px 0;
+  padding:5px 20px;
+  font-size: 26px;
+  background-color: #eae7e7;
+  border-radius: 5px;
+  box-shadow: 5px 4px 10px rgb(226, 202, 206);
+}
+.tagsBox {
+  width: 100%;
+}
+.tagsBox input {
+  outline: none;
+  width: 80%;
+  font-size: 20px;
+  padding: 6px;
+}
+.tagsBox input:focus{
+border: 2px solid rgb(155, 187, 155);
+}
+.tagsBox button {
+  width: 20%;
+  font-size: 20px;
+  padding: 6px;
 }

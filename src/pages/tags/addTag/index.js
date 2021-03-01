@@ -6,7 +6,7 @@ const AddTag = () => {
   const [inputText, setInputText] = useState("");
 
   const dispatch = useDispatch();
-  
+
   const handleChange = (event) => {
     setInputText(event.target.value);
   };
@@ -19,12 +19,10 @@ const AddTag = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input value={inputText} onChange={handleChange} />
-        <button type="submit">Add Tag</button>
-      </form>
-    </div>
+    <form className='tagsBox' onSubmit={handleSubmit}>
+      <input value={inputText} onChange={handleChange} />
+      <button type="submit">Add Tag</button>
+    </form>
   );
 };
 export default AddTag;

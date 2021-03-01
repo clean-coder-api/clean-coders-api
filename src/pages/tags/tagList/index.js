@@ -5,11 +5,10 @@ import { useSelector } from "react-redux";
 const TagList = (props) => {
   const tags = useSelector((state) => state.tags.allTags);
   return (
-    <ul>
+    <ul className='oneTagContainer'>
       {tags.map((tag) => (
         <Tag key={tag.id} title={tag.text} />
       ))}
-      
     </ul>
   );
 };
