@@ -511,38 +511,7 @@ code {
   box-shadow: 2px 2px 3px 0 #4e4c4c;
 }
 /* ================================================================= */
-/* :root{
-  font-size: 8px;
-  padding: 8px;
-  margin: 8px;
-}
 
-
-body , html{
-  background: #f0f0f0;
-  padding: 0 !important;
-  margin: 0 !important;
-} */
-
-/* all elements  */
-/* *{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  text-decoration: none;
-  list-style: none;
-  font-size: 1.75rem;
-} */
-/* global styles */
-/* .container{
-  max-width: 1277px;
-  margin: auto;
-  background: #fff;
-  min-height: 100vh;
-}*/
 .time-picker {
   padding: 2rem;
   position: relative;
@@ -576,16 +545,25 @@ body , html{
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+
 }
 .main > .row {
-  width: 800px;
+  width: 850px;
   border: 1px solid #e2e2e2;
   padding: 1.75rem;
   border-radius: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
   margin-bottom: 1rem;
   align-items: center;
+}
+.main > .row select{
+  width: 100px;
+}
+.main > .row input{
+  width: 200px;
 }
 /* footer */
 .timesFooter {
