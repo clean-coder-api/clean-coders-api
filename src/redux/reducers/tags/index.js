@@ -13,7 +13,6 @@ export const tags = (state = INITIAL_STATE, action) => {
         ],
       };
     }
-
     default:
       return state;
   }

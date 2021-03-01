@@ -5,7 +5,9 @@ import "../../styles.css";
 const Header = () => {
   return (
     <div className="header">
-      <TeamLogo className="logo" />
+      <Link to="/peoples/1">
+        <TeamLogo className="logo" />
+      </Link>
       <Link to="/times">times</Link>
       <Link to="/tags">tags</Link>
       <h1 className="team-name">Clean Coders</h1>
