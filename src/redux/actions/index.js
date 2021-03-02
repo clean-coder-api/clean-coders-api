@@ -24,3 +24,13 @@ export const canselEdit = (text,id) => ({
   id,
   text
 });
+// adding Delete Action for Rows
+export const deleteRow = (id)=>({
+  type :"DELETE_ROW",
+  id
+});
+// adding Delete Action for Rows
+export const editRow = (id)=>({
+  type :"EDIT_ROW",
+  id
+});

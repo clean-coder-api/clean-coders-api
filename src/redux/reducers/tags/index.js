@@ -24,7 +24,7 @@ export const tags = (state = INITIAL_STATE, action) => {
         ...state,
         allTags: [
           ...state.allTags.map((tag) => {
-            if (tag.id == action.id) {
+            if (tag.id === action.id) {
               return { id: tag.id, text: tag.text, edit: !tag.edit };
             } else {
               return tag;
@@ -38,7 +38,7 @@ export const tags = (state = INITIAL_STATE, action) => {
         ...state,
         allTags: [
           ...state.allTags.map((tag) => {
-            if (tag.id == action.id) {
+            if (tag.id === action.id) {
               return { id: tag.id, text: action.text, edit: false };
             } else {
               return tag;
@@ -52,7 +52,7 @@ export const tags = (state = INITIAL_STATE, action) => {
         ...state,
         allTags: [
           ...state.allTags.map((tag) => {
-            if (tag.id == action.id) {
+            if (tag.id === action.id) {
               return { id: tag.id, text: tag.text, edit: false };
             } else {
               return tag;
