@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TimePicker from "../../../../../components/timePicker";
 import moment from "jalali-moment";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const TasksRow = ({ row, editRow, index }) => {
   const diffTime = moment.duration(row.endDate - row.startDate);
   const tags = useSelector((state) => state.tags.allTags);
   const [optionValue, setOptionValue] = useState("");
+
   const handleChange = (e) => {
-    console.log(" Selected!!");
-    setOptionValue(e.target.value);
-    editRow({ ...row, optionValue: e.target.value });
+    console.log(" Selected!!!!!!", e.target.value);
+    let value = e.target.value;
+    setOptionValue(value);
+    // this.handleSubmit(value);
+    editRow({ ...row, optionValue: value });
   };
 
   return (
@@ -20,11 +24,17 @@ const TasksRow = ({ row, editRow, index }) => {
         value={row.description}
         onChange={(e) => editRow({ ...row, description: e.target.value })}
       />
-      <select value={optionValue} onChange={handleChange}>
-        {tags.map((tag) => (
-          <option value={tag.text}>{tag.text}</option>
-        ))}
-      </select>
+      {tags.length > 0 ? (
+        <select value={optionValue} onChange={handleChange}>
+          <option value="">choose a tag</option>
+          {tags.map((tag) => (
+            <option value={tag.text}>{tag.text}</option>
+          ))}
+        </select>
+      ) : (
+        <Link to="/tags">add the first tag</Link>
+      )}
+
       <TimePicker
         placeholder="start time"
         onChange={(value) => editRow({ ...row, startDate: value })}

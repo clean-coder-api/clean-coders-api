@@ -19,7 +19,13 @@ class Wrapper extends Component {
     this.setState({
       data: [
         ...this.state.data,
-        { description: "", startDate: "", endDate: "", isSubmited: false,optionValue:"" },
+        {
+          description: "",
+          optionValue: "",
+          startDate: "",
+          endDate: "",
+          isSubmited: false,
+        },
       ],
     });
   };
@@ -30,10 +36,10 @@ class Wrapper extends Component {
     });
     if (
       row.description.length > 3 &&
+      row.optionValue !== ""&&
       row.startDate !== "" &&
       row.endDate !== "" &&
-      row.endDate > row.startDate&&
-      row.optionValue!==""
+      row.endDate > row.startDate 
     ) {
       this.setState(
         {
@@ -58,7 +64,7 @@ class Wrapper extends Component {
           addEmptyRow={this.addEmptyRow}
           data={this.state.data}
         />
-        <Footer data={this.state.data}/>
+        <Footer data={this.state.data} />
       </>
     );
   }
