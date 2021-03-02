@@ -1,8 +1,6 @@
 import React from 'react';
 import TasksRow from './row';
 
-
-
 const Main = ({data , editRow}) =>{
     // console.log(data);
     return(

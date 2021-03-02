@@ -591,6 +591,7 @@ code {
   box-shadow: 5px 4px 10px rgb(226, 202, 206);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .oneTag button {
@@ -606,17 +607,21 @@ code {
   border-radius: 5px;
   cursor: pointer;
 }
-.oneTag .edit {
-  background-color: rgb(114, 158, 114);
+.oneTag .edit,
+.save {
+  background-color: rgb(114, 158, 114) !important;
 }
-.oneTag .delete {
-  background-color: rgb(223, 108, 108);
+.oneTag .delete,
+.cansel {
+  background-color: rgb(223, 108, 108) !important;
 }
-.oneTag .edit:hover {
-  background-color: rgb(75, 114, 75);
+.oneTag .edit,
+.save:hover {
+  background-color: rgb(75, 114, 75) !important;
 }
-.oneTag .delete:hover {
-  background-color: rgb(207, 65, 65);
+.oneTag .delete:hover,
+.cansel {
+  background-color: rgb(207, 65, 65) !important;
 }
 .tagsBox {
   width: 100%;
