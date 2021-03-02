@@ -10,7 +10,6 @@ const TasksRow = ({ row, editRow, index }) => {
   const [optionValue, setOptionValue] = useState("");
 
   const handleChange = (e) => {
-    console.log(" Selected!!!!!!", e.target.value);
     let value = e.target.value;
     setOptionValue(value);
     // this.handleSubmit(value);

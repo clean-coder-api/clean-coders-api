@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Footer extends Component {
    
   render() {
-    // console.log('data',this.props.data);
     return (
       <div className='timesFooter'>
       <h1>realTime</h1>

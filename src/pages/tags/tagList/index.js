@@ -7,7 +7,7 @@ const TagList = (props) => {
   return (
     <ul className='oneTagContainer'>
       {tags.map((tag) => (
-        <Tag key={tag.id} title={tag.text} />
+        <Tag key={tag.id} title={tag.text} {...tag} />
       ))}
     </ul>
   );

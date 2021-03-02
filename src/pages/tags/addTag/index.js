@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../../redux/actions";
+import { addTag } from "../../../redux/actions";
 
 const AddTag = () => {
   const [inputText, setInputText] = useState("");
@@ -13,8 +13,8 @@ const AddTag = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // add todo to redux
-    dispatch(addTodo(inputText));
+    // add tag to redux
+    dispatch(addTag(inputText));
     setInputText("");
   };
 

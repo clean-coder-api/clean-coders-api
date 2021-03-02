@@ -545,7 +545,6 @@ code {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-
 }
 .main > .row {
   width: 850px;
@@ -559,10 +558,10 @@ code {
   margin-bottom: 1rem;
   align-items: center;
 }
-.main > .row select{
+.main > .row select {
   width: 110px;
 }
-.main > .row input{
+.main > .row input {
   width: 200px;
 }
 /* footer */
@@ -585,11 +584,39 @@ code {
   min-height: 54px;
   list-style: none;
   margin: 15px 0;
-  padding:5px 20px;
+  padding: 5px 20px;
   font-size: 26px;
   background-color: #eae7e7;
   border-radius: 5px;
   box-shadow: 5px 4px 10px rgb(226, 202, 206);
+  display: flex;
+  justify-content: space-between;
+}
+
+.oneTag button {
+  all: unset;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  width: 60px;
+  text-align: center;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.oneTag .edit {
+  background-color: rgb(114, 158, 114);
+}
+.oneTag .delete {
+  background-color: rgb(223, 108, 108);
+}
+.oneTag .edit:hover {
+  background-color: rgb(75, 114, 75);
+}
+.oneTag .delete:hover {
+  background-color: rgb(207, 65, 65);
 }
 .tagsBox {
   width: 100%;
@@ -600,8 +627,8 @@ code {
   font-size: 20px;
   padding: 6px;
 }
-.tagsBox input:focus{
-border: 2px solid rgb(155, 187, 155);
+.tagsBox input:focus {
+  border: 2px solid rgb(155, 187, 155);
 }
 .tagsBox button {
   width: 20%;
