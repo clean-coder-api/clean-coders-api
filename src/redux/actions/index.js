@@ -34,3 +34,12 @@ export const editRow = (id)=>({
   type :"EDIT_ROW",
   id
 });
+
+// adding Add Action for Rows
+export const addRow = (id,text,startTime,endTime,tag)=>({
+  type :"Add_ROW",
+  id,
+  startTime,
+  endTime,
+  tag
+});
