@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Dimmer, Loader } from "semantic-ui-react";
+import PropTypes from 'proptypes';
 
 const Cards = ({ peoples, loading }) => {
   
@@ -43,5 +44,10 @@ const Cards = ({ peoples, loading }) => {
     </div>
   );
 };
+
+Cards.propTypes = {
+  peoples:PropTypes.array, 
+  loading:PropTypes.bool
+}
 
 export default Cards;

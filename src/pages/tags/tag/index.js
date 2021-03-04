@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { deleteTag, editTag, saveEdit,canselEdit } from "../../../redux/actions";
 import { useDispatch } from "react-redux";
+import PropTypes from 'proptypes';
 
 const Tag = (props) => {
   const dispatch = useDispatch();
@@ -52,6 +53,10 @@ const Tag = (props) => {
     </div>
   );
 };
-
+Tag.propTypes = {
+  id: PropTypes.number,
+  edit: PropTypes.any,
+  text: PropTypes.string
+};
 export default Tag;
 

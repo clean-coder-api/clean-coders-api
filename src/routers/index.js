@@ -5,6 +5,7 @@ import People from "../pages/people";
 import Peoples from "../pages/peoples";
 import Times from "../pages/tasks";
 import Tags from "../pages/tags";
+import PropTypes from 'proptypes';
 const CreateRoutes = ({ peoples, totalNumPages, pageSize, loading }) => {
   return (
     <>
@@ -37,5 +38,14 @@ const CreateRoutes = ({ peoples, totalNumPages, pageSize, loading }) => {
     </>
   );
 };
+CreateRoutes.propTypes = {
+  totalNumPages:PropTypes.number,
+  id:PropTypes.number,
+  match:PropTypes.any,
+  loading:PropTypes.bool,
+  pageSize:PropTypes.number,
+  pageId:PropTypes.number,
+  peoples:PropTypes.array
+}
 
 export default CreateRoutes;

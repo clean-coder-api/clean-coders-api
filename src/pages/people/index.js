@@ -1,4 +1,7 @@
+import React from 'react';
+import PropTypes from 'proptypes';
 import actor from "../../assets/img/1.jpg";
+
 const People = (props) => {
   return (
     <>
@@ -45,6 +48,12 @@ const People = (props) => {
       })}
     </>
   );
+};
+People.propTypes = {
+  peoples:PropTypes.array,
+  match:PropTypes.any,
+  params:PropTypes.object,
+  id:PropTypes.id
 };
 
 export default People;

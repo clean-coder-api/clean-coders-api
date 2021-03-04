@@ -2,7 +2,7 @@ import React from "react";
 import Tag from "../tag";
 import { useSelector } from "react-redux";
 
-const TagList = (props) => {
+const TagList = () => {
   const tags = useSelector((state) => state.tags.allTags);
   return (
     <ul className='oneTagContainer'>

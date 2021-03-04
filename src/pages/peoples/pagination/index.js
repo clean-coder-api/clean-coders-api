@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'proptypes';
 
 function Pagination(props) {
   const renderPages = () => {
@@ -26,5 +27,8 @@ function Pagination(props) {
     </div>
   );
 }
-
+Pagination.propTypes = {
+  totalNumPages: PropTypes.number,
+  pageId:PropTypes.number,
+}
 export default Pagination;

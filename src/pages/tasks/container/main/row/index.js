@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TimePicker from "../../../../../components/timePicker";
 import moment from "jalali-moment";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import PropTypes from 'proptypes';
 // import { deleteRow, addRow } from "../../../../../redux/actions";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 
 const TasksRow = ({ row, editRow, index, deleteItem }) => {
   const diffTime = moment.duration(row.endDate - row.startDate);
@@ -56,9 +57,16 @@ const TasksRow = ({ row, editRow, index, deleteItem }) => {
         ).format("HH:mm:ss")}
       </span>
 
-      <button onClick={(e) => deleteItem(index)}> Delete </button>
+      <button onClick={() => deleteItem(index)}> Delete </button>
     </div>
   );
 };
+
+TasksRow.propTypes = {
+  row: PropTypes.object,
+  editRow: PropTypes.func,
+  index: PropTypes.number,
+  deleteItem:PropTypes.func
+}
 
 export default TasksRow;

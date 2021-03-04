@@ -1,6 +1,7 @@
 import React from "react";
 import Cards from "./cards";
 import Pagination from "./pagination";
+import PropTypes from 'proptypes';
 
 function Peoples(props) {
   // Get current peoples
@@ -22,6 +23,16 @@ function Peoples(props) {
       </div>
     </div>
   );
+}
+
+Peoples.propTypes = {
+  totalNumPages:PropTypes.number,
+  id:PropTypes.number,
+  match:PropTypes.any,
+  loading:PropTypes.bool,
+  pageSize:PropTypes.number,
+  pageId:PropTypes.number,
+  peoples:PropTypes.array
 }
 
 export default Peoples;

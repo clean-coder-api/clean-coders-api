@@ -1,21 +1,16 @@
 // node modules
-import React from 'react';
+import React from "react";
 // components
-import Header from './header';
-import Wrapper from './container';
+import Header from "./header";
+import Wrapper from "./container";
 
-
-
-
-const TasksPage = () =>{
-    return(
-        <>
-        <Header />
-        <Wrapper />
-
-        </>
-    )
-}
-
+const TasksPage = () => {
+  return (
+    <>
+      <Header />
+      <Wrapper />
+    </>
+  );
+};
 
 export default TasksPage;

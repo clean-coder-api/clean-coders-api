@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Main from "./main";
 import Footer from "./footer";
+import PropTypes from 'proptypes';
 
 
 class Wrapper extends Component {
@@ -17,7 +18,7 @@ class Wrapper extends Component {
 
   addRowToData = (row) => {
     this.setState({ data: [...this.state.data, row] });
-    console.log(this.state.data);
+    // console.log(this.state.data);
   };
 
   addEmptyRow = () => {
@@ -37,7 +38,7 @@ class Wrapper extends Component {
   deleteItem =(id)=>{
     const payload = [...this.state.data];
     payload.splice(id,1);
-    console.log(payload);
+    // console.log(payload);
     this.setState({data:payload})
   }
   editRow = (index, row) => {
@@ -82,4 +83,7 @@ class Wrapper extends Component {
   }
 }
 
+Wrapper.propTypes = {
+  row:PropTypes.object
+}
 export default Wrapper;
