@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import Main from "./main";
 import Footer from "./footer";
 
+
 class Wrapper extends Component {
+  
+  
+  
   state = {
     data: [],
   };
@@ -13,6 +17,7 @@ class Wrapper extends Component {
 
   addRowToData = (row) => {
     this.setState({ data: [...this.state.data, row] });
+    console.log(this.state.data);
   };
 
   addEmptyRow = () => {
@@ -29,7 +34,12 @@ class Wrapper extends Component {
       ],
     });
   };
-
+  deleteItem =(id)=>{
+    const payload = [...this.state.data];
+    payload.splice(id,1);
+    console.log(payload);
+    this.setState({data:payload})
+  }
   editRow = (index, row) => {
     this.setState({
       data: this.state.data.map((D, i) => (index === i ? row : D)),
@@ -55,6 +65,7 @@ class Wrapper extends Component {
       );
     }
   };
+ 
 
   render() {
     return (
@@ -63,6 +74,7 @@ class Wrapper extends Component {
           editRow={this.editRow}
           addEmptyRow={this.addEmptyRow}
           data={this.state.data}
+          deleteItem={this.deleteItem}
         />
         <Footer data={this.state.data} />
       </>

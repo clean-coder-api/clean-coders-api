@@ -3,11 +3,14 @@ import TimePicker from "../../../../../components/timePicker";
 import moment from "jalali-moment";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+// import { deleteRow, addRow } from "../../../../../redux/actions";
+import { useDispatch } from "react-redux";
 
-const TasksRow = ({ row, editRow, index }) => {
+const TasksRow = ({ row, editRow, index, deleteItem }) => {
   const diffTime = moment.duration(row.endDate - row.startDate);
   const tags = useSelector((state) => state.tags.allTags);
   const [optionValue, setOptionValue] = useState("");
+  // const dispatch = useDispatch();
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -26,8 +29,10 @@ const TasksRow = ({ row, editRow, index }) => {
       {tags.length > 0 ? (
         <select value={optionValue} onChange={handleChange}>
           <option value="">choose a tag</option>
-          {tags.map((tag) => (
-            <option value={tag.text}>{tag.text}</option>
+          {tags.map((tag, index) => (
+            <option key={index + 1} value={tag.text}>
+              {tag.text}
+            </option>
           ))}
         </select>
       ) : (
@@ -50,6 +55,8 @@ const TasksRow = ({ row, editRow, index }) => {
           "H:m:s"
         ).format("HH:mm:ss")}
       </span>
+
+      <button onClick={(e) => deleteItem(index)}> Delete </button>
     </div>
   );
 };

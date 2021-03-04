@@ -8,7 +8,7 @@ export const addTag = (text) => ({
 
 export const deleteTag = (id) => ({
   type: "DELETE_TAG",
-  id,
+  id
 });
 export const editTag = (id) => ({
   type: "EDIT_TAG",
